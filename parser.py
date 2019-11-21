@@ -4,14 +4,11 @@ def load_data(data_folder):
     url = 'http://mygene.info/v3/query?q=*:*&fetch_all=True&dotfield=True&fields=ensembl.gene,HGNC,MIM,entrezgene,pharos.target_id,umls.cui,unigene,pharmgkb,name,symbol'
     cnt = 0
     total = 1
-    print(total)
     while cnt < total:
         doc = requests.get(url).json()
         total = doc['total']
         cnt += len(doc['hits'])
         url = 'http://mygene.info/v3/query?scroll_id=' + doc['_scroll_id']
-        print(url)
-        print(cnt)
         for _doc in doc['hits']:
             _doc = restructure_output(_doc)
             primary_id = get_primary_id(_doc)
