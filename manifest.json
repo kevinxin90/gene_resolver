@@ -1,0 +1,15 @@
+{
+    "version": "0.1",
+    "__metadata__" : {
+        "license_url" : "http://docs.mygene.info/en/latest/terms.html",
+        "licence" : "CC BY-NC 4.0",
+        "url" : "https://www.mygene.info"
+    },
+    "dumper" : {
+        "release" : "version:get_release"
+    },
+    "uploader" : {
+        "parser" : "parser:load_data",
+        "on_duplicates" : "ignore"
+    }
+}
