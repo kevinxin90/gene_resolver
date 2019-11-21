@@ -18,6 +18,7 @@ def load_data(data_folder):
             if primary_id:
                 _doc.pop('_score')
                 _doc['_id'] = primary_id
+                _doc['type'] = 'Gene'
                 yield _doc
 
 
