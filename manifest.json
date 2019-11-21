@@ -6,6 +6,7 @@
         "url" : "https://www.mygene.info"
     },
     "dumper" : {
+        "data_url": "",
         "release" : "version:get_release"
     },
     "uploader" : {
